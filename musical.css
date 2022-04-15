@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Roboto+Slab:wght@100&display=swap');
+
+/* 전체영역 */
+
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+body{font-family: 'Roboto Slab', serif;}
+#wrapper{width: 1340px; height: 100vh; margin: 0 auto; }
+#header{width: 100%; height: 100px;}
+#section{float: left; width: 100%; height: 300px;}
+#image-slider{float: left; width: 100%; height: 600px; overflow: hidden;}
+#footer{float: left; width: 100%; height: 600px; }
+#footer-footer{float: left; width: 100%; height: 500px;}
+
+/* header */
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.title {
+    display: flex;
+    font-weight: 200;
+    font-family: 'Abril Fatface', cursive;
+    cursor: pointer;
+}
+.title .title-icon > i{
+    padding-right: 15px;
+    font-size: 30px;
+}
+.title-name > h3{
+    font-size: 25px;
+}
+.nav{
+    display: inline-flex;
+}
+.nav > ul{
+    display: flex;
+    list-style: none;
+}
+.nav > ul > li > a{
+    color: #000;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.nav > ul > li{
+    padding-left: 35px;
+}
+.nav-bar .nav-bar-content{
+    padding-left: 35px;
+}
+.nav-bar .nav-bar-content > i{
+    font-size: 15px;
+}
+.nav-bar .nav-bar-content > span{
+    padding-left: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* section */
+
+.section-container{
+    height: 100%;
+    padding: 50px 10px 20px 10px;
+    text-align: center;
+}
+.section-container .s-title{
+    padding-bottom: 40px;
+}
+.section-container .s-title > h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 45px;
+}
+.section-container .s-content{
+    padding-bottom: 35px;
+}
+.section-container .s-content > p{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 18px;
+}
+.section-container .s-btn > button{
+    border: none;
+    border-radius: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 50px 15px 50px;
+    background-color: #225B94;
+    cursor: pointer;
+}
+
+/* image-slider */
+
+#image-slider > ul,li{
+    list-style:none;
+}
+#image-slider > ul{
+    position:relative;
+    height: 100%;
+}
+#image-slider li{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left:0;right:0;top:0;bottom:0;
+    animation: fade 8s infinite;
+}
+#image-slider li:nth-child(1){
+    background-image: url(./musical_image/jorge-zapata-ajLlK5qL6Ic-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    animation-delay:0s
+}
+#image-slider li:nth-child(2){
+    background-image: url(./musical_image/martin-hexeberg-jp0VExvkRzY-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    animation-delay:2s
+}
+#image-slider li:nth-child(3){
+    background-image: url(./musical_image/vidar-nordli-mathisen-StAl7MQIioY-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    animation-delay:4s
+}
+#image-slider li:nth-child(4){
+    background-image: url(./musical_image/volodymyr-hryshchenko-D5_cfqMAY0Y-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    animation-delay:6s
+}
+ /* 100 / 8 = 12.5 */
+@keyframes fade {
+  0% {opacity:0;}
+  5% {opacity:1;}
+  25% {opacity:1;}
+  30% {opacity:0;}
+  100% {opacity:0;}
+}
+
+
+/* footer */
+
+#footer{
+    display: flex;
+    
+}
+.f-container{
+    width: 50%;
+    background-color: #EBDEF0 ;
+}
+.fix-image{
+    width: 50%;
+}
+.f-info{
+    height: auto;
+    margin: 50px 60px 50px 60px;
+}
+.f-info .f-title > h1{
+    font-family: 'Prata', serif;
+    font-size: 40px;
+    padding-bottom: 30px;
+    color:#020754;
+}
+.f-info .f-content{
+    padding-bottom: 40px;
+}
+.f-info .f-content > p{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    color: #02053A;
+}
+.f-info .f-btn > button{
+    background-color:#020754 ;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px 50px 15px 50px;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;   
+}
+.fix-image{
+    width: 50%;   
+}
+.fix-img{
+    width: 100%;
+    height: 100%;
+    background-image: url(./musical_image/lucas-alexander-njaQKSM365I-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+/* footer-footer */
+
+#footer-footer{
+    display:flex;
+}
+.f-contact-us{
+    width: 50%;
+}
+.f-contact-us-image{
+    width: 50%;
+}
+.f-contact-us-image > img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;   
+}
+.f-contact-us .f-contact-us-ctn{
+    width: 100%;
+    height: 100%;
+    padding: 50px 60px 50px 60px;
+}
+.f-contact-us-ctn .f-contact-us-title{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #020754;
+}
+.f-contact-us-ctn .f-contact-us-info{
+    height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.f-contact-us-ctn .f-contact-us-info .info-name .f-n{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.f-contact-us-ctn .f-contact-us-info .info-email .em{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+#tymh{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.f-contact-us-ctn .f-contact-us-info .info-name .f-n > span{
+    padding-bottom: 10px;
+    color: #02053A;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.f-contact-us-ctn .f-contact-us-info .info-email .em > span{
+    padding-bottom: 10px;
+    color: #02053A;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#tymh > span{
+    padding-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #02053A;
+}
+.f-contact-us-ctn .f-contact-us-info .info-name .f-n >input{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #02053A;
+}
+.f-contact-us-ctn .f-contact-us-info .info-email .em > input{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #02053A;
+}
+
+#tymh > input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #02053A;
+}
+
+.f-contact-us-ctn .f-contact-us-btn >button{
+    background-color:#020754 ;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px 50px 15px 50px;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+}
+
+/* Media Query */
+
+/* 모바일 */
+@media all and (max-width: 767px){
+    #wrapper{width: 100%; height: 100%;}
+    #header{width: 100%; height: 100px;}
+    .nav{display: none;}
+    #secition{height:300px;}
+    #image-slider{height: 300px;}
+    #footer{height: 400px; flex-direction: column;}
+    #footer .f-container{width: 100%; height: 400px; display: block; flex-direction: column;}
+    #footer .f-container .f-info{height: 400px; margin: 0; padding-left: 10px; padding-right: 10px;}
+    #footer .f-container .f-info .f-title > h1{font-size: 20px; padding-bottom: 10px; padding-top: 10px; text-align: center;}
+    #footer .f-container .f-info .f-content{padding: 0;}
+    .f-info .f-content > p{line-height: 1.5; font-size: 12px;}
+    .f-info .f-btn > button{padding: 5px; font-size: 8px; float: right;}
+    #footer .fix-image{width: 100%; display: none;}
+    #footer-footer{height: 400px; flex-direction: column;}
+    #footer-footer .f-contact-us-image{display: none;}
+    #footer-footer .f-contact-us{width: 100%; height: 300px;}
+    #footer-footer .f-contact-us .f-contact-us-ctn{height: 500px;}
+
+
+}
+
+
+/* 태블릿 */
+@media all and (min-width: 768px)and (max-width: 1024px){
+    #wrapper {width: 100%;}
+    #header{padding-left: 10px; padding-right: 10px;}
+}
+
+/* 데스크탑 */
+@media all and (min-width: 1025px){
+    #wrapper {width: 95%;}
+}
